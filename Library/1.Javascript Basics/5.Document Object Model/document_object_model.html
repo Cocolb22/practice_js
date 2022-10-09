@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Practice Javascript</title>
+</head>
+
+<body>
+
+<h1>Intéragir avec le navigateur</h1>
+
+<h3 id="titre">DOM</h3>
+
+<p> bonjour</p>
+<a href="https://www.google.fr/"> lien google</a>
+
+<p class="class">le document créé dans le navigateur est modelé par l'objet document créé par le navigateur</p>
+<p> dans le nav, c'est le "document object", et ce document contient par défaut un grand nombre de méthodes disponibles</p>
+
+<p> pour cibler avec du JS un élément dans une autre page, il faut créer une const dans JS, et faire un query selector. cela cible le premier élément de la page </p>
+<p>pour cibler une classe, il faut nommer la classe dans la variable, ex : ('.class') ou (#ID).</p>
+<p> on peut autrement faire un getElementById pour cibler un ID, </p>
+<p>si on a deux fois la même classe, mais que l'on veut n'en cibler qu'une, il faut spécifier l'élément dans le querySelector</p>
+<p> on peut aussi directement cibler dans la console l'élément que l'on veut récupérer, et copier sa position pour la placer dans le query selector</p>
+<p> pour cibler plusieurs éléments identiques, querySelectorAll, cela vaut pour les classes et élements </p>
+
+<p>pour cibler tous les éléments identiques, par exemple les p, dans une page HTML, utiliser getElementByTagName, cela crée une collection de tous les éléments ciblés</p>
+
+<h3>Ajouter, modifier et supprimer du contenu</h3>
+
+<p> on peut modifier du texte inséré dans le HTML dans la page JS, en ciblant l'élément que l'on veut modifier.</p>
+<p> on peut alors utiliser .innerText sur l'élément pour le modifier</p>
+<p> pour modifier plusieurs éléments identiques, faire un querySelectorAll des éléments voulus, et créer la méthode avec un forEach</p>
+<p> on peut aussi modifier tout le contenu HTML, avec .innerHTML . En faisant ça, on peut modifier le tag ( ex: un p en h1),  ainsi que le text</p>
+
+<p> pour modifier le lien vers un site, on fait un querySelector du a </p>
+<p> le a à un attribut qui est le href. pour modifier l'attribut, on utilise la méthode setAttribute sur le href, en passant deux arguments</p>
+<p> le premier arguement est l'élément ciblé, donc le href, et le deuxième argument est le nouvel attribut</p>
+<p>ex: link.setAttrbiute('href', 'https:www.google.com');</p>
+
+<p> on peut ajouter une classe à un tag, en le ciblant, et en passant les deux arguments avec la méthode setAttribute</p>
+<p> on peut aussi changer son style. cela change complètement le style qui existait avant</p>
+
+<p> pour ajouter des modifications de style en complément de ce qui existe déjà, on crée une variable avec l'élement ciblé, et on ajoute la méthode .style </p>
+<p> .style permet de modifier les propriétés de l'élement ciblé, comme la marge, padding, couleur, font-size, sans overwritter ce qui a déjà été fait</p>
+<p> pour supprimer une propriété, ciblé la propriété voulue, et lui mettre une valeur égale à une string nulle</p>
+
+<p>pour ajouter une classe à un élément qui n'en a pas un, on crée une variable et on cible l'élément voulu avec un querySelector, on ajoute la propriété .classList et .add </p>
+<p> cela permet de rajouter la classe</p>
+<p> pour supprimer une classe, même syntaxe, mais au lieu de add, on utilise .remove</p>
+<a href="https://developer.mozilla.org/fr/docs/Web/API/Element/classList"> lien mozilla classList</a>
+
+
+<script src="testing_5.js"></script>
+</body>
+</html>

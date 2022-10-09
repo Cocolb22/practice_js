@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Practice Javascript</title>
+
+</head>
+
+<body>
+
+<h1>Objects</h1>
+
+<p> un objet a des propriétés et peut avoir des méthodes</p>
+<p> un objet fonctionne avec un système de key value </p>
+<p> on peut insérer un array dans l'objet</p>
+
+<p> on peut récupérer les propriétés de l'object en les appelant, ex:user.name</p>
+<p> on peut également récupérer la propriété avec la syntaxe user['name']</p>
+<p> on peut mettre à jour les valeurs en modifiant directement </p>
+
+<p> pour sortir une clé d'un objet dans une méthode, on utilise this, suivi de l'objet que l'on veut sortir</p>
+<p> le this fait référence à l'objet quand il est utilisé dans une méthode</p>
+<p> possibilité de refacto la syntaxe d'une fonction régulière</p>
+
+<p> on peut stocker des objets dans une array, comme un nom d'auteur et une année pour un livre</p>
+
+<h3>Math object</h3>
+
+<p>Math est par définition un objet créé par JS, qui a de nombreuses méthodes prédéfinies</p>
+<a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Math">math function, link mozilla</a>
+<p> utiliser Math pour y accéder</p>
+<p> utiliser la méthode .random pour créer un nombre aléatoire</p>
+
+<h1>Références</h1>
+
+<p> les objects, array, functions, dates sont tous des références, alors que les nombre, boolean, string, null, undefined et symbol sont des primitives</p>
+<p>cela influe sur la façon de les stocker et de les utiliser</p>
+<p> les primitives sont stockés dans le "stack", et les références dans le "heap". Heap à plus de place dispo pour stocker </p>
+<p>cela influe aussi la façon dont ils sont modifiables. Si on crée un primitive, qu'on lui assigne une valeur, puis qu'on en crée une copie, les deux auront la même valeur</p>
+<p>cependant si on modifie l'original, cela ne va pas modifier la copie, on se retrouvera avec par exemple:</p>
+<p>user = "coco"</p>
+<p> user1 = user2</p>
+<p>les deux users on coco comme string, mais si je change user1 en "erlé", seul user1 change, car les deux élements ne pointent pas vers la même chose à l'endroit où ils sont stockés</p>
+<p> ils sont considérés comme deux valeurs différentes</p>
+
+<p> à l'inverse, si je crée un objet, avec un nom et un age, si je crée un original et une copie, si je modifie l'original, alors je modifie la copie</p>
+
+  <script src="testing_4.js"></script>
+</body>
+</html>

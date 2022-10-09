@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Practice Javascript</title>
+
+</head>
+
+  <body>
+
+  <h1>Syntax basics </h1>
+
+<p> pour faire un lien entre une page HTML et page JS, faire un "script src=" avec la page en lien, en bas du body </p>
+
+<p> utiliser ; pour finir la ligne </p>
+
+<p> utiliser la console pour printer directement dans le navigateur</p>
+
+<p> console.log(value), pour printer dans la console sur le nav</p>
+
+<p> utiliser let pour créer une variable réassignable, ex let age= 25;</p>
+
+<p> utiliser const pour une variable non modifiable</p>
+
+<p>on peut printer à la suite les variables dans le console.log. ex = console.log(age, year) </p>
+
+<p> on peut ensuite modifier la variable dans le document JS, juste en changeant la valeur de la variable</p>
+
+<p> // pour commenter une ligne, /* et */ pour commenter plusieurs lignes</p>
+
+  <h1>Types</h1>
+
+<p> Number: tous les nombres, entiers et décimaux </p>
+
+<p> String:  les phrases, on peut utiliser ' ou " c'est pareil</p>
+
+<p> Boolean:  true or false</p>
+
+<p> Null: variables sans valeur</p>
+
+<p> Undefined: variables non définies</p>
+
+<p> Object: Array, Dates, Literals</p>
+
+<h3> String methods</h3>
+
+<p> pour faire une concatenation si c'est une phrase, rajouter l'espace vide entre les mots </p>
+
+<p> utiliser la method .length pour avoir la longueur du mot </p>
+
+<p> utiliser la method .toUpperCase pour avoir le mot en majuscule</p>
+
+<p> utiliser la method .indexOf(argument) pour trouver la position de l'argument </p>
+    <ul>
+      <li> .lastIndexOf(argument) pour avoir la dernière position de l'argument</li>
+      <li> .slice(arg1, arg2) sur une variable pour afficher entre deux points
+        <ol> si arg1 = arg2 renvoi string vide</ol>
+          <ol>si arg1 est supérieur à arg2, renvoi une string vide</ol>
+          <ol> si arg2 est oublié, affiche tout à partir de arg1</ol>
+          <ol> si les arg sont supérieurs à la longueur de la string, renvoi une string vide</ol>
+      </li>
+      <li> .substring(arg1, arg2) sur une variable pour afficher entre les deux points
+        <ol> si arg1 = arg2 renvoi string vide</ol>
+        <ol>si arg1 est supérieur à arg2, la méthode inverse les deux valeurs</ol>
+        <ol> arg1 est le point de départ, arg2 la longeur prise, et non la position, ex (2,10), début à 2 et fin à 12. Si arg2 > à length, alors on arrête à la fin de la string</ol>
+      </li>
+      <li>.replace pour remplacer la première lettre ciblée par une autre ('arg1', 'arg2'), arg1 est l'arguement remplacé par arg2</li>
+    </ul>
+
+<p> pour intégrer une variable dans une string, utiliser le `` pour créer la string, et appeler les variables avec ${variable}</p>
+<p>on peut créer des méthodes js, avec des tags HTML pour les afficher dans la console</p>
+
+<h3> Number methods</h3>
+
+<p> operateurs mathématiques: +, -, *, **( pour la puissance), /, %</p>
+
+<p> ordre de calcul dans une opération:</p>
+    <ul> <ol>Parenthèses</ol>
+         <ol>Puissances</ol>
+         <ol>Division</ol>
+         <ol> Multiplication</ol>
+         <ol>Addition/Soustraction</ol>
+    </ul>
+
+<p> utiliser le ++ pour rajouter +1, ou -- pour faire -1</p>
+<p>+= arg pour additionner la variable avec arg, -= arg, pour soustraire, /= arg pour diviser la variable par arg, et *= pour mutiplier</p>
+<p> pas possible de faire des opérations entre des nombres et des strings</p>
+
+<h3>Array methods</h3>
+
+<p>utiliser les [], pour récupérer juste un des éléments de l'array</p>
+<p> ex: famille[1]</p>
+<p> .length pour avoir le nombre d'élements de l'array</p>
+<p> .join sur un array permet d'insérer tous les éléments dans une string, </p>
+<p> .concat permet d'insérer une array dans une array </p>
+<p> .push permet d'ajouter un élément à une array, et retourne le nombre d'éléments de l'array </p>
+<p> .pop permet de détruire le dernier élément d'une array et retourne cet élément</p>
+
+<h3> Null et Undefined</h3>
+
+<p>si une variable n'est pas définie == Undefined</p>
+<p> une variable qui est null n'est pas Undefined, c'est une variable qui n'a aucune valeur, mais qui peut être modifié</p>
+
+<h3>Boolean methods</h3>
+
+<p> .includes permet de retourner un boolean si un élément est présent. ça peut être une string ou un nombre</p>
+<p> utiliser un = pour assigner à une variable, et == pour faire une comparaison, et === pour faire une stricte égalité</p>
+<p> la comparaison retourne false si une string n'est pas strictement identique à l'élément comparé</p>
+<p> on peut utiliser les comparaisons entre strings, pour comparer les lettres de l'alphabet, les lettres les plus loin étant > aux lettres plus proche du début</p>
+<p> ex: z > a </p>
+<p> les lettres majuscules sont aussi > aux lettres minuscules</p>
+
+<p> JS considère qu'une string est égale à un nombre, car au moment de la comparaison, il fait une conversion</p>
+<p> Donc si le nombre en tant que nombre, est égal à un nombre dans une string, il retourne true</p>
+<p> une stricte comparaison rendra un false</p>
+
+<h3>Types conversions</h3>
+
+<p>On peut changer le type d'une variable dans JS indiquant avant la conversion son nouveau type </p>
+<p> on peut utiliser la méthode typeof pour vérifier le type d'une variable</p>
+<p> on peut pas changer un mot en nombre, renvoi NaN</p>
+<p>on peut changer un nombre en String</p>
+<p> on peut changer un élement en Boolean, un nombre positif ou négatif, ex: 100, renvoi true, mais 0 renvoi false</p>
+<p> une string est également un Boolean qui renvoi true</p>
+
+
+<script src="testing.js"></script>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Practice Javascript</title>
+
+</head>
+
+  <body>
+
+  <h1>Loops</h1>
+
+    <h3> For loops </h3>
+
+<p> pour créer une boucle, on utilise le for</p>
+
+<p> il faut une varaible d'initialisation, puis la condition, et une expression finale qui s'exécute à la fin du code</p>
+<p> la condition peut également être une variable avec une méthode</p>
+
+  <h3>While loops</h3>
+
+<p>même principe que le for, mais syntaxe différente</p>
+
+<p> l'exemple permet de printer le nom du pokémon en fonction de sa position dans l'array</p>
+
+
+  <h3>do while loop</h3>
+
+<p> c'est une extension du while</p>
+<p> le do while crée une boucle qui  exécute une instruction jusqu'à ce qu'une condition ne soit plus vérifiée</p>
+
+<h1> Conditionnal</h1>
+
+<h3> If, else if et multiple conditions</h3>
+
+<p> si la condition est remplie, éxécute le code</p>
+<p> voir la syntaxe pour le if else, et mulitple condition</p>
+<p> pour le else if, on doit insérer les conditions par ordre décroissant si on manipule des chiffres</p>
+
+<h3> Opérateurs logiques</h3>
+
+<p> le && renvoie le code si deux conditions sont true, ou équivalent à true</p>
+<p> on peut multiplier les conditions, le && ne vaudra que pour la condition dans laquelle il est inséré, si on implémente du else if</p>
+<p> le || crée une condition alternative. si une des deux conditions est bonne, alors le code s'éxécute</p>
+<p> on peut créer des conditions multiples, en créant des conditions entre différentes || </p>
+<p>utiliser le ! pour inverser la condition de validité</p>
+
+<h3> Casser une boucle</h3>
+
+<p> pour casser une boucle, on crée une boucle puis on y insère une condition qui quand elle est remplie arrête la boucle </p>
+<p> on casse alors la boucle avec break</p>
+
+<h3> Continuer la boucle </h3>
+
+<p> le continue dans une boucle permet de casser la boucle et de recommencer</p>
+<p> ici ça efface le 0 de la boucle</p>
+
+<h3> Switch</h3>
+
+<p> switch permet de créer plusieurs conditions, sans utiliser un else if</p>
+<p> on crée les conditions avec case, on finit avec : , puis on écrit le code que l'on veut si la condition est remplie</p>
+<p> le switch ne compare que des valeurs strictement identiques, pas possible de comparer un nombre avec une string</p>
+
+<h3> Scope</h3>
+
+<p>une variable peut être appelé dans une méthode ou en dehors, elle a alors un scope global, cela ne vaut que si elle a été créée en dehors d'un block </p>
+<p> si une variable est créée dans un block ou modifie une variable dans le block, elle n'existe que dans le block et la valeur modifiée ne vaut que dans le block</p>
+<p>en cas de block dans un block, la valeur de la variable est celle qui est la plus récente du block appelé</p>
+<p> cela vaut pour les variables let et const </p>
+
+    <script src="testing_2.js"></script>
+  </body>
+</html>

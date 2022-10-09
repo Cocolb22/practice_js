@@ -1,0 +1,37 @@
+<!DOCTYPE html>>
+
+<html>
+<head>
+
+  <title> Asynchonous Practice</title>
+</head>
+
+<body>
+
+<h1>HTTP Requests</h1>
+
+<p> on fait des requêtes http, pour récupérer de la data sur un autre serveur, ou sur une API</p>
+
+<p> les données que l'on reçoit en retour du serveur sont dans un format appelé JSON, la syntaxe ressemblant beaucoup à un objet JS</p>
+
+<a href="https://jsonplaceholder.typicode.com/"> JSON Place Holder, pour tester</a>
+
+<h3>faire une requete HTTP</h3>
+
+<a href="https://developer.mozilla.org/fr/docs/Web/API/XMLHttpRequest"> XMLHttpRequest</a>
+
+<p>il faut faire une new XMLHttpRequest(). cela fonctionne pour tous les types de données, XML, JSON, text brut...</p>
+<p>on ouvre ensuite la variable avec open, et on passe deux arguements. Le premier est le type de requete, GET, POST, PUT...</p>
+<a href="https://developer.mozilla.org/fr/docs/Web/HTTP/Methods"> Voir tous les types de requetes</a>
+<p>le deuxième argument est le end-point, l'endroit ou on veut récupérer les données, c'est donc l'adresse du lien</p>
+<p>il faut ensuite envoyer la requete avec la méthode send</p>
+
+<p> pour savoir quand on a eu une réponse, il faut créer un eventListener qui va permettre de savoir le stade où en est la requete</p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState">XMLHttpRequest.readyState</a>
+
+
+  <script src="testing_2.js"></script>
+</body>
+
+
+</html>
