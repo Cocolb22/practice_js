@@ -24,7 +24,23 @@
 
 <h1> Promises</h1>
 
-<p></p>
+<a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise">lien mozilla Promise</a>
+
+<p>une Promise, permet d'éviter de nester trop de fonctions</p>
+<p> une promise va avoir deux issues, une positive (resolve) et une négative (reject)</p>
+
+<p> il faut prévoir les deux cas, et prévoir ce que la fonction va donner dans les deux</p>
+<p> pour créer la promise, il faut:</p>
+<ul>
+  <li>créer une fonction</li>
+  <li> faire un return new Promise dans la première fonction puis créer la fonction associée</li>
+  <li>passer les deux paramètres resolve et reject</li>
+  <li>prévoir ce que font les resolve et reject</li>
+</ul>
+
+<p> quand on appelle la fonction, il faut appeler la fonction, et ajouter la méthode .then pour appeler la callback function dans le then, puis prévoir ce qui va se passer dans chaque cas</p>
+
+<p> une autre façon d'écrire la promise, est avec la méthode .catch</p>
 
 
 
