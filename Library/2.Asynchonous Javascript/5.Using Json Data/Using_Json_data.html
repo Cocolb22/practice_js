@@ -8,6 +8,19 @@
 
 <body>
 
+  <h1>Using Json Data</h1>
+
+<p>pour récupérer les données, on utilise un Json</p>
+<p>quand on les reçoit, après une requete HTTP, les données brutes sont envoyées comme si c'était un array, avec des objets à l'intérieur</p>
+<p>mais c'est en fait une seule string, car lors de l'échange de données entre le serveur et le navigateur, c'est fait sous forme de format texte</p>
+
+<p>pour pouvoir récupérer la data sous forme d'objet, il faut utiliser la méthode JSON.parse, qui va transformer la chaine de caractère JSON en valeur javascript </p>
+<p> il faut aussi la stocker dans une variable pour pouvoir la réutiliser</p>
+
+<p>on peut aussi créer son propre fichier Json, et l'appeler</p>
+<p>il faut respecter la syntaxe, et placer tous les éléments des objets entre guillemets doubles: "" </p>
+<p>seuls les boolean et nombre n'ont pas besoin d'être entre guillemets</p>
+
 
   <script src="testing_5.js"></script>
 </body>
