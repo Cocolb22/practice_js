@@ -8,7 +8,7 @@
 
 <body>
 
-  <h1>Callback Hell</h1>
+  <h1>Callback Hell </h1>
 
 <p> pour appeler plusieurs documents Json, qui sont dans le dossier, on passe un second paramètre, en plus du callback</p>
 <p> l'argument est resource</p>
@@ -38,10 +38,19 @@
   <li>prévoir ce que font les resolve et reject</li>
 </ul>
 
-<p> quand on appelle la fonction, il faut appeler la fonction, et ajouter la méthode .then pour appeler la callback function dans le then, puis prévoir ce qui va se passer dans chaque cas</p>
+<p> Pour executer la fonction, il faut appeler la fonction, et ajouter la méthode .then pour appeler la callback function dans le then, puis prévoir ce qui va se passer dans chaque cas</p>
 
 <p> une autre façon d'écrire la promise, est avec la méthode .catch</p>
 
+<h1> Enchainer les Promises</h1>
+
+<p> pour enchainer les promises, on insère un return puis la méthode que l'on veut rappeler</p>
+
+<p>on ajoute après avoir appeler la fonction, la méthode .then et on définit ce que l'on veut qu'il se passe</p>
+
+<p> on peut enchainer autant de fois que l'on veut</p>
+
+<p>la moidre erreur dans la chaine fait s'arrêter la suite là où l'erreur se déclare </p>
 
 
   <script src="testing_6.js"></script>

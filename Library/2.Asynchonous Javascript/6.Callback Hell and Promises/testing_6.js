@@ -38,7 +38,7 @@ getRequest('Json_files/test1.json', (err, data) => {
 // Promise
 const getSomething = () => {
   return new Promise((resolve, reject) => {
-    // resolve('some data');
+    resolve('some data');
     reject('some error;');
   });
 };
@@ -78,6 +78,20 @@ const getRequest2 = (resource) => {
 
 getRequest2('Json_files/test2.json').then(data => {
   console.log('promise ok', data)
+}).catch(err => {
+  console.log ('mauvais retour', err)
+})
+
+//enchainer les promises
+
+getRequest2('Json_files/test1.json').then(data => {
+  console.log('promise 1 ok', data)
+  return getRequest2('Json_files/test2.json');
+}).then(data => {
+  console.log("promise 2 ok", data)
+  return getRequest2('Json_files/test3.json');
+}).then(data => {
+  console.log("promise 3 ok", data);
 }).catch(err => {
   console.log ('mauvais retour', err)
 })
