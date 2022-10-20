@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+  <title> Asynchonous Practice</title>
+</head>
+
+<body>
+
+  <h1> FETCH API</h1>
+
+<p><a href="https://developer.mozilla.org/fr/docs/Web/API/Fetch_API/Using_Fetch">lien Fetch_API mozilla</a></p>
+
+
+<p><a href="https://developer.mozilla.org/fr/docs/Web/API/Response"> lien response fetch mozilla</a></p>
+
+<p> un fetch est un type de promesse</p>
+<p>le fetch prend un argument, qui est le chemin de la ressource recherchée</p>
+<p> on utilise ensuite la méthode .then, qui va renvoyer un objet js, en cas de reponse positive, c'est la response</p>
+<p> pour l'erreur, on utilise la méthode .catch, qui va aussi renvoyer un objet js, qui sera err</p>
+<p> on crée ensuite la méthode qui sera retourné en cas de succès, et celle en cas d'erreur</p>
+
+<p>le problème de fetch est qu'il ne reverra de réponse négative que si il y a une erreur lié à un navigateur</p>
+<p>en cas d'erreur dans la ressource recherchée, il va quand même indiquer que c'est résolu, mais ne vas ramener aucune donnée</p>
+
+<p> le fetch va retourner un objet Response qu'on va pouvoir manipuler</p>
+<p>on appliquant la méthode .json sur l'objet Response, on va pouvoir sortir les éléments voulus du document</p>
+<p> (voir le lien sur response pour voir toutes les méthodes disponibles sur l'objet Response)</p>
+<p> la response étant également une promesse, on ne peut pas créer une variable pour extraire </p>
+<p> par contre comme c'est une promesse, on peut y ajouter un return, et en extraire la data en utilisant la méthode .then</p>
+
+<h1>ASYNC ET AWAIT</h1>
+
+<p><a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Statements/async_function#:~:text=Une%20fonction%20async%20peut%20contenir,au%20sein%20des%20fonctions%20asynchrones.">lien mozilla async et await</a></p>
+<p> <a href="https://developer.mozilla.org/fr/docs/Learn/JavaScript/Asynchronous/Promises#async_et_await">lien mozilla, comment utiliser les promesses</a></p>
+
+<p> pour pouvoir enchainer les promesses, on peut créer une fonction ordinaire, puis indiquer qu'elle est asynchrone, et qu'elle ne va pas bloquer le code</p>
+<p> avec le mot async dans la fonction</p>
+<p> insérer le mot async, va faire que la fonction rendra toujours une promesse</p>
+<p> on peut ensuite créer une nouvelle variable, qui va faire le fetch, et insérer le await </p>
+<p> le await va stocker le fetch, jusqu'à ce qu'il y ait eu une réponse, puis va assigner la valeur à la variable, si on a eu une réponse positive</p>
+<p>pour récupérer le json de la réponse, on peut utiliser la méthode .json, qu'on peut stocker dans une nouvelle variable</p>
+<p> on peut ensuite enchainer les méthodes, en multipliant les await</p>
+<p>pour récupérer la data sous la forme que l'on veut, on est obligé d'ajouter la méthode .then() à la variable, puis de prévoir la réponse en cas de succès</p>
+<p> et de prévoir la réponse avec la méthode .catch() en cas d'échec</p>
+
+
+  <script src="testing_7.js"></script>
+</body>
+
+
+</html>
