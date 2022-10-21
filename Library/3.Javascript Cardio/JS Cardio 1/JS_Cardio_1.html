@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript Cardio</title>
+</head>
+<body>
+
+  <h1> Exercice 1: Inverser une string</h1>
+
+
+<p><a href="https://www.freecodecamp.org/news/how-to-reverse-a-string-in-javascript-in-3-different-ways-75e4763c68cb/">lien reverse string</a></p>
+
+<p> voir le lien avec les différentes méthodes pour inverser une string</p>
+<ul>
+  <li><p> .split permet de diviser une chaine de caractère, une string, et de ressortir chaque caractère indépendamment dans un array</p></li>
+  <p> ex :pour hello ==> (5) ['h', 'e', 'l', 'l', 'o']</p>
+
+  <li><p> .reverse inverse l'ordre</p></li>
+  <li><p> .join concaténe tous les éléments d'un tableau, supprime l'array, et renvoie une string</p></li>
+</ul>
+
+<p>.reduce est une méthode d'accumulation, qui prend deux paramètres, le premier est un callback, et le second la valeur initiale</p>
+<p> <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce"> lien méthode reduce mozilla</a></p>
+
+
+<h1> Exercice 2: Créer un palindrome</h1>
+
+<p>c'est un mot qui ce lie dans les deux sens, même si inversé</p>
+<p> on peut utiliser la même fonction que pour inverser une string, et ajouter une condition</p>
+<p> si le mot est strictement égal, retourner le mot</p>
+<p> on peut faire un if else, ou alors prévoir directement le retour suivi de la condition</p>
+
+<h1>Exercice 3: Inverser un integer</h1>
+
+<p> faire pareil que pour les autres fonctions, puis ajouter la méthode parseInt à la variable revString pour changer la string en interger</p>
+
+<p><a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/parseInt">méthode parseInt</a></p>
+
+<p> ajouter l'objet Math et la méthode .sign pour retourner le signe si on en ajoute un devant</p>
+
+<p><a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Math">lien objet Math mozilla</a></p>
+<p> .sign est une méthode prévu dans l'objet Math</p>
+
+<h1> Exercice 4 : Mettre en majuscule un mot ou tous les premières lettre d'une phrase </h1>
+
+<p><a href="https://flexiple.com/javascript/javascript-capitalize-first-letter/"> exemple capitalize</a></p>
+
+<p> Etapes:</p>
+<ul>
+  <li>créer une variable pour découper et mettre dans un array les lettres, puis les mettre toutes les lettres en minuscule </li>
+  <li>créer une boucle, avec un point de départ à 0, et faire qu'il ne dépasse pas la longueur de la string, et ajouter 1 à chaque fois </li>
+  <li> on définit ensuite la forme de chaque lettre en fonction de sa position dans l'array</li>
+  <li> pour la position 0, on prend l'index 0, et on ajoute la méthode .substring(), on y passant les index de début et de fin, 0 et 1, et on ajoute la méthode .toUpperCase()</li>
+  <li> pour le reste des lettres, on les ajoute à l'array, en y passant l'index 1</li>
+  <li> on finit par appliquer .join à l'array, pour retourner une string, et on met des guillemets avec un espace dans le .join pour espacer les mots</li>
+</ul>
+
+<h1> Exercice 5 : Max Character</h1>
+
+<p>Etapes</p>
+
+<ul>
+  <li>on crée une fonction avec un paramètre, le mot que l'on veut analyser</li>
+  <li>on crée un objet vide, le const CharMap, qui va contenir les lettres et leurs nombres </li>
+  <li>on crée aussi deux variables, le maxNum qui va avoir pour commencer 0, et le maxChar, qui est une string vide, pour récupérer à la fin la lettre la plus utilisée </li>
+  <li>on crée un array du mot avec .split pour séparer les lettres </li>
+  <li>on ajoute un .forEach dans lequel on passe une fonction qui va regarder chaque lettre, qui est l'argument char</li>
+  <li>on crée un if, qui va renvoyer directement un boolean sur le charMap, sur lequel on passe le char, la lettre, et si la lettre existe, on ajoute un</li>
+  <li>le else va servir à prendre la première lettre à chaque fois qu'elle est trouvé, et lui ajouter un </li>
+  <li> il faut ensuite créer un for in loop, pour l'utiliser sur l'objet, pour retourner la lettre qui revient le plus</li>
+  <li><a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Statements/for...in">lien for in loop</a></li>
+  <li>on crée un if que l'on va utiliser sur le charMap[char], pour le comparer au maxNum </li>
+  <li>si le nombre est plus grand que maxNum, on lui assigne cette valeur, et on assigne le maxChar au char, cad la lettre qui sera le plus ressorti </li>
+</ul>
+
+
+<h1> Exercice 6 : FIZZBUZZ</h1>
+
+<p><a href="https://flexiple.com/javascript/fizzbuzz-javascript/">lien exemple fizzbuzz</a></p>
+
+<p> le i % 3 === 0, est un moyen de vérifier que le nombre que l'on veut diviser par 3 ne rend à la fin que 0, si le nombre ne rend pas 0, alors ce n'est pas un multiple de 3</p>
+
+
+<script src="playing_ground.js"></script>
+</body>
+</html>
